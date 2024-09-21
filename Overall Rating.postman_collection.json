@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "e57fbd6b-e1b4-480f-9c71-0d9e9fd2d389",
+		"name": "Overall Rating",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38480720"
+	},
+	"item": [
+		{
+			"name": "API Aventador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes name\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes description\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"description\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes comments\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"comments\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes votes\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"votes\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://k51qryqov3.execute-api.ap-southeast-2.amazonaws.com/prod/models/ckl2phsabijs71623vk0%7Cckl2phsabijs71623vlg",
+					"protocol": "https",
+					"host": [
+						"k51qryqov3",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"models",
+						"ckl2phsabijs71623vk0%7Cckl2phsabijs71623vlg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
